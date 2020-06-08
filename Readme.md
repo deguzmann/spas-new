@@ -1,4 +1,4 @@
-# Стартовый шаблон [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Шаблон для ГК СПАС [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Владелиц: [Евгений Самошкин]
 
@@ -24,7 +24,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`,
 
 #### 2. Клонируйте репозиторий на свой компьютер
 
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
+Обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
 
 <img width="769" alt="" src="https://user-images.githubusercontent.com/10909/34914833-c3757cf0-f92b-11e7-9512-365f3e2a339f.png">
 
@@ -45,10 +45,3 @@ npm i
 ```
 npm run start
 ```
-
-#### 5. Начинайте обучение!
-
-[travis-image]: https://travis-ci.org/htmlacademy-adaptive/597453-cat-energy.svg?branch=master
-[travis-url]: https://travis-ci.org/htmlacademy-adaptive/597453-cat-energy
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/597453-cat-energy/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/597453-cat-energy?type=dev
