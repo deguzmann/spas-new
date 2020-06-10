@@ -1,0 +1,45 @@
+.footer {
+  min-height: 200px;
+  border-top: 3px solid $color-green;
+  background-color: #423F3F;
+}
+
+.footer__wrapper {
+  @include width-wrapper(1300px);
+  padding: 40px;
+  display: flex;
+  color: #ffffff;
+}
+
+.footer__logo {
+  margin-right: 20px;
+  position: relative;
+  width: 88px;
+  height: 120px;
+
+  img {
+    display: block;
+    position: absolute;
+    top: -60px;
+    border: 1px solid #000000;
+  }
+}
+
+.footer__desc {
+  margin: 8px 0;
+  width: 400px;
+}
+
+.footer__contacts {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin: 8px 0;
+    font-size: 22px;
+    color: #ffffff;
+  }
+}
+
+

@@ -1,0 +1,29 @@
+.offer-shop {
+  margin-bottom: 100px;
+}
+
+.offer-shop__wrapper {
+  @include width-wrapper(1300px);
+  padding: 40px;
+}
+
+.offer-shop__item {
+  padding: 20px;
+  display: flex;
+  background: #F1F1F1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.offer-shop__img {
+  margin-right: 20px;
+  width: 45%;
+}
+
+.offer-shop__title {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.offer-shop__btn {
+  width: 200px;
+}

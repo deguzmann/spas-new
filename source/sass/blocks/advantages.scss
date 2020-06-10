@@ -1,0 +1,35 @@
+.advantages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  @media (min-width: $desktop-width) {
+    width: 400px;
+  }
+}
+
+.advantages__value {
+  width: 160px;
+  font-size: 32px;
+  line-height: 30px;
+
+  span {
+    font-size: 72px;
+    line-height: 70px;
+  }
+}
+
+.advantages__name {
+  width: 240px;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 300;
+}
