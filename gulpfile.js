@@ -1,26 +1,28 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var autoprefixer = require("autoprefixer");
-var postcss = require("gulp-postcss");
-var plumber = require("gulp-plumber");
-var del = require('del');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const autoprefixer = require("autoprefixer");
+const postcss = require("gulp-postcss");
+const plumber = require("gulp-plumber");
+const del = require('del');
 
-var server = require("browser-sync").create();
-var minify = require("gulp-csso");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
+const server = require("browser-sync").create();
+const minify = require("gulp-csso");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 
-var paths = {
+const paths = {
   styles: {
     src: 'source/sass/style.scss',
     dest: 'build/assets/css/'
   },
   scripts: {
     src: 'source/js/**/*.js',
-    dest: 'build/assets/js/'
+    dest: 'build/assets/js/',
+    main: 'source/js/app.js'
   }
 };
 
@@ -50,7 +52,8 @@ function styles() {
 
 function scripts() {
   return gulp.src(paths.scripts.src, { sourcemaps: true })
-    /*.pipe(babel())*/
+    .pipe(plumber())
+    .pipe(babel())
     .pipe(uglify())
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest(paths.scripts.dest))
@@ -75,7 +78,7 @@ function copy() {
 }
 
 function watch() {
-  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.scripts.main, scripts);
   gulp.watch(paths.styles.src, styles);
 }
 
@@ -89,7 +92,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", styles);
-  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.scripts.main, scripts);
   gulp.watch("source/*.html", html).on("change", server.reload);
 });
 

@@ -67,7 +67,7 @@
   width: 40px;
 
   @media (min-width: $desktop-width) {
-    width: 70px;
+    width: 50px;
   }
 }
 
@@ -78,10 +78,10 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #68b738;
-  color: #fff;
+  background-color: $color-green;
+  color: #ffffff;
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.9;
   padding: 5px 10px;
   border-radius: 6px;
   position: absolute;
@@ -91,8 +91,8 @@
   width: 160px;
 
   @media (min-width: $desktop-width) {
-    top: 76px;
-    left: -54px;
+    top: 66px;
+    left: -64px;
   }
 }
 
@@ -108,13 +108,13 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent #68b738 transparent;
+  border-color: transparent transparent $color-green transparent;
 }
 
 .doc__list {
   margin: 0;
   padding: 0;
-  padding-bottom: 25px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -138,6 +138,6 @@
   display: block;
   color: $color-black;
   @media (min-width: $desktop-width) {
-    width: 135px;
+    width: auto;
   }
 }
