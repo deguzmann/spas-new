@@ -1,4 +1,4 @@
-var pageHeader = document.querySelector('.page-header');
+/*var pageHeader = document.querySelector('.page-header');
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.page-header__toggle');
 
@@ -16,4 +16,16 @@ navToggle.addEventListener('click', function() {
     navToggle.classList.remove('page-header__toggle--opened');
     navToggle.classList.add('page-header__toggle--closed');
   }
+});*/
+
+$('.product-card__photo').on('click', function() {
+  $.fancybox.open({
+    src  : '#modal-form',
+    type : 'inline',
+    opts : {
+      afterShow : function( instance, current ) {
+        console.log( 'done!' + instance );
+      }
+    }
+  });
 });

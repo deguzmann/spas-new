@@ -53,7 +53,8 @@ function scripts() {
     /*.pipe(babel())*/
     .pipe(uglify())
     .pipe(concat('app.min.js'))
-    .pipe(gulp.dest(paths.scripts.dest));
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(server.stream());
 }
 
 function html() {
@@ -88,6 +89,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", styles);
+  gulp.watch(paths.scripts.src, scripts);
   gulp.watch("source/*.html", html).on("change", server.reload);
 });
 

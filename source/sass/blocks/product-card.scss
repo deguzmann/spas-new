@@ -1,0 +1,143 @@
+.product-card {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #F1F1F1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product-card__title {
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+.product-card__info {
+  display: flex;
+  position: relative;
+}
+
+.product-card__photo {
+  margin-right: 10px;
+  width: 25%;
+}
+
+.product-card__properties {
+  width: 45%;
+}
+
+.product-card__table {
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.product-card__table tr:nth-child(2n+1) {
+  background-color: #ffffff;
+}
+
+.product-card__advantages {
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 260px;
+  border: 3px solid $color-green;
+  box-sizing: border-box;
+}
+
+.other-feature__list {
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.other-feature__item {
+/*   margin-right: 35px;
+ */}
+
+.other-feature__img {
+  width: 40px;
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #68b738;
+  color: #fff;
+  text-align: center;
+  opacity: 0.6;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: -70px;
+  width: 160px;
+
+  @media (min-width: $desktop-width) {
+    top: 76px;
+    left: -54px;
+  }
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #68b738 transparent;
+}
+
+.doc__list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  list-style: none;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.doc__link {
+  padding: 0;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: $color-black;;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.doc__title {
+  display: block;
+  color: $color-black;
+  @media (min-width: $desktop-width) {
+    width: 135px;
+  }
+}

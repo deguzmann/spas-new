@@ -1,0 +1,12 @@
+.product-list {
+  margin-bottom: 100px;
+}
+
+.product-list__wrapper {
+  @include width-wrapper(1300px);
+  padding: 0 40px;
+}
+
+.product-list__item {
+  margin-bottom: 80px;
+}

@@ -22,6 +22,18 @@
       height: 95vh;
     }
   }
+
+  &--category {
+    height: 300px;
+    background: url('../../img/bg-category.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $desktop-width) {
+     /*  height: 95vh; */
+    }
+  }
 }
 
 .first-screen__wrapper {
@@ -45,6 +57,15 @@
     margin-top: 400px;
     font-size: 100px;
     line-height: 100px;
+  }
+
+  &--category {
+    margin-top: 60px;
+
+    @media (min-width: $desktop-fullhd) {
+      font-size: 80px;
+      line-height: 80px;
+    }
   }
 }
 
